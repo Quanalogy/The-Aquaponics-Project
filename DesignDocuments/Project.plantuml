@@ -1,0 +1,39 @@
+@startuml
+
+title The Aquaponics Project
+
+frame GreenHouse {
+    boundary TemperatureSensor
+    boundary HumiditySensor
+    boundary LuxSensor
+
+    node Pi {
+        database SensorData
+        boundary WiFi
+    }
+
+    
+    frame AquaponicsSystem {
+        boundary WaterLevelSensor
+        boundary WaterFlowSensor
+        boundary WaterTemperatureSensor [
+            Temperature sensor
+            _PT100
+            _ADC
+        ]
+        boundary WaterPump
+    }
+}
+
+frame App {
+    boundary Network
+}
+
+'TemperatureSensor -- SensorData
+
+
+'App -- SensorData
+
+GreenHouse --[hidden]-- App
+
+@enduml
