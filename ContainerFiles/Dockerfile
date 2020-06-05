@@ -14,7 +14,7 @@ RUN /root/.cargo/bin/rustup target add arm-unknown-linux-gnueabihf
 
 RUN echo '\nexport PATH=$PATH:/root/.cargo/bin\n' >> /root/.bashrc
 
-RUN rustup install stable
+RUN /root/.cargo/bin/rustup install stable
 
 COPY entrypoint.sh /usr/local/bin/
 
