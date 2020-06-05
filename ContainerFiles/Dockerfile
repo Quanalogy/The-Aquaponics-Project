@@ -9,10 +9,12 @@ ENV PKG_CONFIG_PATH=/usr/lib/arm-linux-gnueabihf/pkgconfig
 
 RUN dpkg --add-architecture armhf
 RUN apt-get update && apt-get install -qq pkg-config libudev-dev:armhf curl
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain stable-x86_64-unknown-linux-gnu
 RUN /root/.cargo/bin/rustup target add arm-unknown-linux-gnueabihf
 
 RUN echo '\nexport PATH=$PATH:/root/.cargo/bin\n' >> /root/.bashrc
+
+RUN rustup install stable
 
 COPY entrypoint.sh /usr/local/bin/
 
