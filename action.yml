@@ -1,7 +1,0 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
-runs:
-  using: 'docker'
-  image: 'ContainerFiles/Dockerfile'
-#  args:
-#    - /root/.cargo/bin/cargo build --verbose
