@@ -14,3 +14,6 @@ RUN /root/.cargo/bin/rustup target add arm-unknown-linux-gnueabihf
 
 RUN echo '\nexport PATH=$PATH:/root/.cargo/bin\n' >> /root/.bashrc
 
+COPY entrypoint.sh /usr/local/bin/
+
+ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
