@@ -18,6 +18,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build
         uses: ./
-        run: cargo build --verbose
+#        run: cargo build --verbose
 #     - name: Run tests
 #       run: cargo test --verbose

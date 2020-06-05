@@ -3,3 +3,5 @@ description: 'Greet someone and record the time'
 runs:
   using: 'docker'
   image: 'ContainerFiles/Dockerfile'
+  args:
+    - cargo build --verbose
