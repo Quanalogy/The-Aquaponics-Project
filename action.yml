@@ -4,4 +4,4 @@ runs:
   using: 'docker'
   image: 'ContainerFiles/Dockerfile'
   args:
-    - cargo build --verbose
+    - /root/.cargo/bin/cargo build --verbose
