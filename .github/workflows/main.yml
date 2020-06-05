@@ -16,8 +16,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build
-        uses: ./
+      - name: Build docker
+        run: docker build -t rust-arm-builder ContainerFiles
+      - name: Install cross
+        run: cargo install cross
+      - name: Build code
+        run: cross build --target arm-unknown-linux-gnueabihf --verbose
+
+#        uses: ./
 #        run: cargo build --verbose
 #     - name: Run tests
 #       run: cargo test --verbose

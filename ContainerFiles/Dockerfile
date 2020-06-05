@@ -16,6 +16,6 @@ RUN /root/.cargo/bin/rustup default stable
 
 RUN echo '\nexport PATH=$PATH:/root/.cargo/bin\n' >> /root/.bashrc
 
-COPY entrypoint.sh /usr/local/bin/
+#COPY entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
+#ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
