@@ -3,7 +3,6 @@
 This project aims to create an autonomous home made Aquaponics system.
 In the long run we hope to be able to be able to run the system primarily from solar energy, with as many part of the project automated as possible.
 
-
 # Design
 
 The overall design document can be found in `Project.plantuml` and can be viewed with plantuml.
